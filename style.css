@@ -1,22 +1,60 @@
-/* Page background and basic text styling */
+/* Shared styles for Mango Paradise */
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    padding: 30px 16px;
-    background-color: cyan;
+    padding: 0 16px 30px;
+    background: #baf4f4;
     font-family: Arial, Helvetica, sans-serif;
     color: #17333a;
 }
 
-/* Main content area */
-.recipe-card {
-    max-width: 850px;
+.site-header {
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 18px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    color: #075e68;
+    font-size: 1.35rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #075e68;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    background: #087e8b;
+    color: white;
+}
+
+.recipe-card,
+.info-card {
+    max-width: 900px;
+    margin: 12px auto 0;
     padding: 28px;
-    background-color: #ffffff;
+    background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
 }
@@ -32,7 +70,25 @@ h2 {
     color: #087e8b;
 }
 
-/* Center the mango lassi image */
+h3 {
+    color: #075e68;
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 1.65;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #bd7412;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+}
+
 .image-container {
     text-align: center;
     margin: 20px 0;
@@ -46,26 +102,26 @@ h2 {
     border-radius: 10px;
 }
 
-p {
-    line-height: 1.6;
-}
-
-/* Ingredients button and list */
-button {
+button,
+.button-link {
+    display: inline-block;
     padding: 11px 18px;
     border: 0;
     border-radius: 6px;
-    background-color: #087e8b;
+    background: #087e8b;
     color: white;
     font-size: 16px;
+    text-decoration: none;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #05616b;
+button:hover,
+.button-link:hover {
+    background: #05616b;
 }
 
-button:focus-visible {
+button:focus-visible,
+a:focus-visible {
     outline: 3px solid #17333a;
     outline-offset: 3px;
 }
@@ -75,12 +131,11 @@ button:focus-visible {
     margin-top: 12px;
 }
 
-/* Recipe steps table */
 table {
     width: 100%;
     margin-top: 12px;
     border-collapse: collapse;
-    background-color: #ffffff;
+    background: white;
 }
 
 th,
@@ -91,17 +146,115 @@ td {
 }
 
 th {
-    background-color: #baf2f5;
+    background: #baf2f5;
     color: #17333a;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #effcfc;
+    background: #effcfc;
+}
+
+.page-link {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.page-link a {
+    color: #087e8b;
+    font-weight: bold;
+}
+
+/* About Mangoes page */
+.hero {
+    padding: 26px 20px;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #fff4cf, #e0fbf4);
+}
+
+.hero h1 {
+    margin-bottom: 8px;
+}
+
+.hero p:not(.eyebrow) {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.mango-art {
+    margin-top: 12px;
+    font-size: 3.5rem;
+    letter-spacing: 8px;
+}
+
+.variety-grid,
+.storage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.variety,
+.storage-item {
+    padding: 18px;
+    border: 1px solid #c5e6e7;
+    border-radius: 10px;
+    background: #f5ffff;
+}
+
+.variety p,
+.storage-item p {
+    margin-bottom: 0;
+}
+
+.variety-icon {
+    font-size: 2rem;
+}
+
+.benefit-list,
+.tip-list {
+    padding-left: 24px;
+    line-height: 1.9;
+}
+
+.callout {
+    margin-top: 30px;
+    padding: 22px;
+    text-align: center;
+    border-radius: 10px;
+    background: #effcfc;
+}
+
+.callout h2 {
+    margin-top: 0;
+}
+
+footer {
+    max-width: 900px;
+    margin: 22px auto 0;
+    text-align: center;
+    color: #28636a;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
-    .recipe-card {
+    .site-header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .recipe-card,
+    .info-card {
         padding: 18px;
+    }
+
+    .variety-grid,
+    .storage-grid {
+        grid-template-columns: 1fr;
     }
 
     th,
