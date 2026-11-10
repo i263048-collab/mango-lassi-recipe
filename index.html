@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Mango Lassi Recipe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Lassi Recipe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+<body>
+    <main class="recipe-card">
+        <h1>Mango Lassi Recipe</h1>
 
-<img src="https://www.yellowthyme.com/wp-content/uploads/2023/03/Mango-Lassi-08589-819x1024.jpg" alt="Image of Mango Lassi" width="460" height="345">
-<h1>
-    Description:
-</h1>
-<p1>
-    A cool drink with a mix of dairy yougurt ab=nd 
-</p1>
+        <div class="image-container">
+            <img
+                src="https://www.yellowthyme.com/wp-content/uploads/2023/03/Mango-Lassi-08589-819x1024.jpg"
+                alt="A glass of mango lassi"
+            >
+        </div>
+
+        <section>
+            <h2>Description</h2>
+            <p>
+                Mango lassi is a cool, refreshing drink made with mangoes,
+                yogurt, milk, and sugar. Blend the ingredients together to
+                make a smooth and delicious drink.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ingredients</h2>
+            <button id="ingredients-button" type="button"
+                    aria-expanded="false" aria-controls="ingredients-list">
+                Show Ingredients
+            </button>
+            <ul id="ingredients-list" hidden>
+                <li>1.5 cups chopped mangos</li>
+                <li>0.75 cup yogurt</li>
+                <li>0.75 cup milk</li>
+                <li>2–3 tablespoons sugar</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Preparation Steps</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Step</th>
+                        <th scope="col">Instructions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Chop the mangoes.</td></tr>
+                    <tr><td>2</td><td>Add the mangoes, sugar, and milk to a blender.</td></tr>
+                    <tr><td>3</td><td>Blend until smooth.</td></tr>
+                    <tr><td>4</td><td>Add the yogurt.</td></tr>
+                    <tr><td>5</td><td>Blend again.</td></tr>
+                    <tr><td>6</td><td>Serve.</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
 </html>
